@@ -1,23 +1,35 @@
-﻿using System;
- namespace hata_yonetimi;
- {
+﻿// See https://aka.ms/new-console-template for more information
+
+using System;
+
+namespace switch_case
+{
     class Program
     {
-        static void Main(string[] args)
+        private const int V1 = 1;
+        private const int V = V1;
+
+        static void Main(string[]args, int v)
         {
-            Console.Writeline("Bir sayı giriniz");
-            int sayi = Convert.ToInt32(Console.ReadLine());
-            Console.Writeline("Girişiniz Olduğu Sayı;"+ sayi);
+            int month= DateTime.Now.Month;
+            //expression
+            switch (month)
             {
-                catch(Exception ex)
-                {
-                    Console.Writeline("Hata"+ ex.Message);
-                }
-                finally
-                {
-                    Console.Writeline("işlem tamam");
-                }
+                case 1;
+                Console.WriteLine("OCAK AYINDAYSAN");
+                break;
+                case 2;
+                Console.WriteLine("ŞUBAT AYINDAYSAN");
+                break;
+                case 3;
+                Console.WriteLine("MART AYINDAYSAN");
+                break;
+                default;
+                Console.WriteLine("yanlış veri");
+                break;
+
+
             }
         }
     }
- }
+}
